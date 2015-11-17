@@ -253,6 +253,10 @@ test_sha : test_sha.cpp libsnarkfront.a
 	$(CXX) -c $(CXXFLAGS) $(CXXFLAGS_EXTRA) $< -o test_sha.o
 	$(CXX) -o $@ test_sha.o $(LDFLAGS) $(LDFLAGS_EXTRA)
 
+test_lightning : test_lightning.cpp libsnarkfront.a
+	$(CXX) -c $(CXXFLAGS) $(CXXFLAGS_EXTRA) $< -o test_lightning.o
+	$(CXX) -o $@ test_lightning.o $(LDFLAGS) $(LDFLAGS_EXTRA)
+
 tests : $(LIBRARY_TESTS)
 
 tools : $(LIBRARY_BIN)
